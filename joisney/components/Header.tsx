@@ -9,10 +9,10 @@ export const Header = () => {
       <Link href="/">
         <Image
           src={disney}
-          alt="DisneyLogo"
+          alt="Disney Logo"
           width={120}
           height={100}
-          className="cursor-pointer"
+          className="cursor-pointer invert-0 dark:invert"
         />
       </Link>
       <div className="flex space-x-2">
