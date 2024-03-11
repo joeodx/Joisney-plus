@@ -5,7 +5,7 @@ import { ThemeToggler } from "./ThemeToggler";
 
 export const Header = () => {
   return (
-    <header>
+    <header className="fixed w-full z-20 top-0 flex items-center justify-center p-5 bg-gradient">
       <Link href="/">
         <Image
           src={disney}
