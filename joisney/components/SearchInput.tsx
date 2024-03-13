@@ -22,7 +22,7 @@ const router = useRouter();  // 1. Define your form.
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values)
+    
 
     router.push(`/search/${values.input}`)
     form.reset();

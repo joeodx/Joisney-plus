@@ -1,8 +1,15 @@
+'use client'
 import { Genres } from '@/typings';
-import React from 'react'
+import React from 'react';
+import { DropdownMenu, DropdownMenuContent,  DropdownMenuItem,  DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu';
+import { ChevronDown } from "lucide-react";
+import Link from 'next/link';
+
+
 
 async function GenreDropdown() {
   const url = "https://api.themoviedb.org/3/genre/movie/list?language=en";
+  
   const options: RequestInit = {
     method: "GET",
     headers: {
@@ -16,13 +23,29 @@ async function GenreDropdown() {
     
   };
 
-  const response = await fetch(url, options)
-  const data = (await response.json()) as Genres 
+  const response = await fetch(url, options);
+  const data = (await response.json()) as Genres ;
 
-  console.log(data)
   return (
-    <div>Genre</div>
+    <DropdownMenu>
+    <DropdownMenuTrigger className="text-white flex justify-center items-center">
+    Genre <ChevronDown className="m1-1" /> 
+    </DropdownMenuTrigger>
+
+    <DropdownMenuContent>
+      <DropdownMenuLabel>Select a Genre</DropdownMenuLabel>
+     <DropdownMenuSeparator />
+     {data.genres.map(genre => (
+      <DropdownMenuItem key={genre.id}>
+        <Link
+        href={`/genre/${genre.id}?genre=${genre.name}`}>
+          {genre.name}
+        </Link>
+      </DropdownMenuItem>
+     ))}
+    </DropdownMenuContent>
+  </DropdownMenu>
   )
 }
 
-export default GenreDropdown
+export default GenreDropdown 
