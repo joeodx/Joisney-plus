@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export type Movie = {
     adult: boolean;
     backdrop_path: string;
@@ -14,6 +16,8 @@ export type Movie = {
     vote_average: number;
     vote_count: number;
 }
+
+console.log(title);
 
 
 export type SearchResults = {
