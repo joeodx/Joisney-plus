@@ -3,6 +3,7 @@ import Link from "next/link";
 import disney from "../../joisney/public/disney.png";
 import { ThemeToggler } from "./ThemeToggler";
 import SearchInput from "./SearchInput";
+import GenreDropdown from "./GenreDropdown";
 
 export const Header = () => {
   return (
@@ -17,6 +18,7 @@ export const Header = () => {
         />
       </Link>
       <div className="flex space-x-2">
+        <GenreDropdown />
         <SearchInput />
         <ThemeToggler />
       </div>
