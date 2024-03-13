@@ -3,7 +3,7 @@
 export default function Home() {
   return (
     <main className="bg-red">
-      <h1>YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYOU GOT TO 1 HR 4 MINUTES ON THE VIDEO WITH LETS BUILD</h1>
+      <h1>YYYYYYYYYYYYYYzYYYYYYYYYYYYYYYYYYYOU GOT TO 1 HR 4 MINUTES ON THE VIDEO WITH LETS BUILD</h1>
       {/* <Button variant={"secondary"}>click Me </Button> */}
       
     </main>

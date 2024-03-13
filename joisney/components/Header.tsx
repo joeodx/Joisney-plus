@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import disney from "../../joisney/public/disney.png";
 import { ThemeToggler } from "./ThemeToggler";
-// import SearchInput from "./SearchInput";
+import SearchInput from "./SearchInput";
 
 export const Header = () => {
   return (
@@ -17,7 +17,7 @@ export const Header = () => {
         />
       </Link>
       <div className="flex space-x-2">
-        {/* <SearchInput /> */}
+        <SearchInput />
         <ThemeToggler />
       </div>
     </header>
