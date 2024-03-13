@@ -25,6 +25,7 @@ const router = useRouter();  // 1. Define your form.
     console.log(values)
 
     router.push(`/search/${values.input}`)
+    form.reset();
   }
   return (
     <Form {...form}>
